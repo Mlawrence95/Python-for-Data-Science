@@ -4,13 +4,14 @@ Want to install Python and build an environment for working with data? You've co
 ![Wow, a plot!](./resources/first_plot.gif)
 
 
-### Introduction
+### Is a Python installation tutorial really necessary?
 One of the most common difficulties people have when getting started with Python is the installation. 
-Folks frequently have issues not only downloading Python itself, but managing the external tools, or packages. 
+Folks frequently have issues not only downloading Python itself, but managing the external tools (we call these libraries or packages). 
 I'm going to walk you through using `conda` to build your first data science environment and hopefully avoid unnecessary trouble with what can be a messy install process.
 
-I'm going to assume you have minimal background with using a terminal or command prompt,
-but any experience you have will help.
+I'm going to assume you have little to no background with using a terminal or command prompt, 
+though any experience you have will help make more sense of these commands.
+
 Let's get started.
 
 ### Installation
@@ -23,14 +24,16 @@ Let's get started.
     We can get rid of the environment and make a new one. If you want more background on `conda`, check out the documentation 
     [here](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/getting-started.html).
     
-    This process is a little easier if you're using MacOS or Linux, but Windows should work great!
+    This process is a little easier if you're using MacOS or Linux, but Windows should work great! As I cannot test Windows 
+    commands on my machine, Windows users should follow the documentation linked below very closely. 
     The respective links to download `conda` for each operating system are found in the following locations:
     
     * [Linux](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/linux.html)
     * [MacOS](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/macos.html)
     * [Windows](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/windows.html)
     
-    It doesn't matter whether you download `Anaconda` or `miniconda` - both give you the `conda` tool (`miniconda` has less bloat so I prefer it myself).
+    It doesn't matter whether you download `Anaconda` or `miniconda` in most cases. Both give you the `conda` tool (`miniconda` has less bloat so I prefer it myself). 
+    Windows users may benefit from a full `Anaconda` install to take advantage of the `Anaconda prompt` terminal.
     
     To verify this step was done correctly, open a terminal/command prompt instance and type in `conda -h` (this asks the program for help). 
     If `conda` isn't recognized, you may need to restart your terminal. If problems persist, look back at the installation link for pointers.
@@ -63,20 +66,20 @@ Let's get started.
     It will likely ask you if you'd like to install the packages mention in `[Y/n]` format. 
     Confirm and let `conda` handle the rest!
     
-3) #### Accessing the environment
+3) #### Accessing our Python environment
     *Congratulations!* You now have a Python environment available with a ton of great data science tools! 
     
     Accessing these packages is really simple. Since our environment is simply called `data-science-environment`,
-    we make the python environment available with the following command:
+    we make the python environment available with:
    
     `conda activate data-science-environment`
-   
      
    ![It should look something like this](./resources/conda_activate.gif)
      
      
-...and that's really all there is to it! If this environment is active, you can run Python scripts using any of the powerful packages with no additional effort, or even modify the `.yml` file to create a new, 
-reproducible environment of your own! 
+     
+...and that's all there is to it! If this environment is active, you can run Python scripts using any of the powerful packages with no additional effort, or even modify the `.yml` file to create a new, 
+reproducible environment of your own! Try running `ipython` to start an interactive session right away, then pat yourself on the back for your diligence.
 
 
 ### Optional: Set up ability to choose your environment within Jupyter notebooks (kernels)
@@ -86,9 +89,8 @@ our environment by simply calling,
 
 `jupyter notebook`
 
-and then opening a notebook with the "new" tab in the upper-right corner. Here you should see the option to use Python 3,
+and then opening a notebook with the "new" button in the upper-right corner of your browser. Here you should see the option to use Python 3,
 and since you're using your new environment, you'll have access to some great packages! 
-
 But what if you have multiple projects? 
 We can add one extra layer of configuration - the ability to choose which conda environment to run code from. With one extra line of code, we can 
 select our computing environment with ease!
@@ -98,10 +100,11 @@ Simply run the following (taking care to use `conda activate` to run within your
 
 `python -m ipykernel install --user --name data-science-environment --display-name "Whatever name you want here"`
 
-Then, voila! Choosing a display name of "Machine learning sandbox", we now have choices of what environment to use!
-Notice that there's a `Julia` kernel as well; we aren't limited to Python!
+Then, voila! I chose "Machine learning sandbox" for my display name, and you can see that we now have choices of what environment to use!
+Notice that there's a `Julia` kernel that got added as well; we aren't limited to Python!
 
 ![Making a new notebook](./resources/custom_kernel.gif)
 
-Happy computing.
+
+Thank you for reading, and happy computing.
 
