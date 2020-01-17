@@ -9,8 +9,8 @@ One of the most common difficulties people have when getting started with Python
 Folks frequently have issues not only downloading Python itself, but managing the external tools (we call these libraries or packages). 
 I'm going to walk you through using `conda` to build your first data science environment and hopefully avoid unnecessary trouble with what can be a messy install process.
 
-I'm going to assume you have little to no background with using a terminal or command prompt, 
-though any experience you have will help make more sense of these commands.
+I'm going to assume you have a little bit of experience using a terminal or command prompt, 
+though anything we do will within the terminal should be easily google-able if it's confusing. 
 
 Let's get started.
 
@@ -56,12 +56,12 @@ Let's get started.
     
     a) If you haven't already, download `data-science-environment.yml`
     
-    b) Copy the path to its location. For example, for me it would be at `/Users/mike/Documents/GitHub/Python-for-Data-Science/data-science-environment.yml`.
+    b) Find the path to its location. For example, for me it would be at `/Users/mike/Documents/GitHub/Python-for-Data-Science/data-science-environment.yml`.
     The details of getting the path vary among operating systems, but it's usually a right-click option. Google this if you're unsure.
     
-    c) Open your terminal back up, and let's build our Python environment! The command is simple:
+    c) Open your terminal back up *within* the folder that has our `.yml` file, or navigate to it using the `cd` command. We can now build our Python environment! The command is straightforward:
      
-     `conda env create -f <path from step 2b>` 
+     `conda env create -f data-science-environment.yml` 
      
     It will likely ask you if you'd like to install the packages mention in `[Y/n]` format. 
     Confirm and let `conda` handle the rest!
