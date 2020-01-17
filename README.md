@@ -1,5 +1,8 @@
 # Getting Started With Python Data Science Tools
-Want to install Python and build an environment for working with data? You've come to the right place!
+Want to install Python and build an environment for working with data? You've come to the right place! 
+
+![Wow, a plot!](./resources/first_plot.gif)
+
 
 ### Introduction
 One of the most common difficulties people have when getting started with Python is the installation. 
@@ -54,20 +57,20 @@ Let's get started.
     The details of getting the path vary among operating systems, but it's usually a right-click option. Google this if you're unsure.
     
     c) Open your terminal back up, and let's build our Python environment! The command is simple:
-     ```   
-     conda env create -f <path from step 2b>
-     ``` 
+     
+     `conda env create -f <path from step 2b>` 
+     
     It will likely ask you if you'd like to install the packages mention in `[Y/n]` format. 
     Confirm and let `conda` handle the rest!
     
 3) #### Accessing the environment
-    Congratulations! You now have a Python environment available with a ton of great data science tools! 
+    *Congratulations!* You now have a Python environment available with a ton of great data science tools! 
     
     Accessing these packages is really simple. Since our environment is simply called `data-science-environment`,
     we make the python environment available with the following command:
-    ```
-    conda activate data-science-environment
-    ```
+   
+    `conda activate data-science-environment`
+   
      
    ![It should look something like this](./resources/conda_activate.gif)
      
@@ -76,6 +79,29 @@ Let's get started.
 reproducible environment of your own! 
 
 
-### Optional: Setting up Jupyter notebooks
-In progress
-  
+### Optional: Set up ability to choose your environment within Jupyter notebooks (kernels)
+
+Jupyter notebooks are a fantastic tool for exploring data and prototyping new data-oriented code. We can run them from within
+our environment by simply calling,
+
+`jupyter notebook`
+
+and then opening a notebook with the "new" tab in the upper-right corner. Here you should see the option to use Python 3,
+and since you're using your new environment, you'll have access to some great packages! 
+
+But what if you have multiple projects? 
+We can add one extra layer of configuration - the ability to choose which conda environment to run code from. With one extra line of code, we can 
+select our computing environment with ease!
+
+To do this, we'll use [`ipykernel`](https://ipython.readthedocs.io/en/stable/install/kernel_install.html). 
+Simply run the following (taking care to use `conda activate` to run within your environment),
+
+`python -m ipykernel install --user --name data-science-environment --display-name "Whatever name you want here"`
+
+Then, voila! Choosing a display name of "Machine learning sandbox", we now have choices of what environment to use!
+Notice that there's a `Julia` kernel as well; we aren't limited to Python!
+
+![Making a new notebook](./resources/custom_kernel.gif)
+
+Happy computing.
+
