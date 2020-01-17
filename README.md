@@ -52,7 +52,7 @@ Let's get started.
     Personally, I think `pymc3` is one of the best tools you can learn in this list as it provides a powerful interface
     for Bayesian machine learning. Let's continue.
     
-    We're going to get these installed on your machine with the following easy steps:
+    We're going to get these installed on your machine with the following few steps:
     
     a) If you haven't already, download `data-science-environment.yml`
     
