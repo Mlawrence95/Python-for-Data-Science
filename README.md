@@ -34,6 +34,8 @@ Let's get started.
    
     If you see a bunch of details about using the program, congrats, you're nearly done!
     
+    ![conda to the rescue](./resources/conda_help.gif)
+
 2) #### Creating our data science environment
 
     At this point, `conda` is working for you. Making a new environment isn't as scary as it may sound!
@@ -63,11 +65,17 @@ Let's get started.
     
     Accessing these packages is really simple. Since our environment is simply called `data-science-environment`,
     we make the python environment available with the following command:
-     ```
-     conda activate data-science-environment
-     ```
+    ```
+    conda activate data-science-environment
+    ```
      
-     ...and that's really all there is to it! If this environment is active, you can run Python scripts using any of 
-     the powerful packages with no additional effort, or even modify the `.yml` file to create a new, 
-     reproducible environment of your own! 
+   ![It should look something like this](./resources/conda_activate.gif)
+     
+     
+...and that's really all there is to it! If this environment is active, you can run Python scripts using any of the powerful packages with no additional effort, or even modify the `.yml` file to create a new, 
+reproducible environment of your own! 
+
+
+### Optional: Setting up Jupyter notebooks
+In progress
   
